@@ -7,14 +7,34 @@ RapidAPI üzerinden sağlanan Booking.com API kullanılarak geliştirilmiş mode
 
 :star: Proje Hakkında
 
-:small_blue_diamond: Katmanlı Mimari
-
+:one: Katmanlı Mimari
 API Layer : REST API endpoint’lerinin tanımlandığı katman.
 Business Layer : İş kuralları ve validasyonların bulunduğu katman.
 Data Access Layer : Veritabanı CRUD operasyonlarının yapıldığı katman. 
 Entity Layer : Tüm entity modellerinin tanımlandığı katman. 
 Presentation Layer : Kullanıcı arayüzünün bulunduğu katman.
 
+:two: API Test & Dokümantasyon
+:small_blue_diamond: Swagger
+:small_blue_diamond: Postman
+
+:three: Kimlik Doğrulama & Yetkilendirme
+:small_blue_diamond: ASP.NET Identity 🔐 ile kullanıcı hesap yönetimi
+:small_blue_diamond: Rol tabanlı yetkilendirme
+
+:four: Öne Çıkan Teknolojiler
+:small_blue_diamond: AutoMapper 🔄 → DTO ↔ Entity dönüşümleri
+:small_blue_diamond:
+:small_blue_diamond:
+:small_blue_diamond:
+:small_blue_diamond:
+:small_blue_diamond:
+:small_blue_diamond:
+:small_blue_diamond:
+:small_blue_diamond:
+:small_blue_diamond:
+:small_blue_diamond:
+:small_blue_diamond:
 
 :low_brightness: Admin Paneli Özellikleri
 
