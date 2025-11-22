@@ -53,6 +53,7 @@ Presentation Layer : Kullanıcı arayüzünün bulunduğu katman.
 
 :small_blue_diamond: Repository Design Pattern
 
+
 :low_brightness: Admin Paneli Özellikleri
 
 :small_blue_diamond: Personel, referanslar, hizmetler, odalar, misafirler, roller vb. için CRUD
@@ -64,6 +65,7 @@ Presentation Layer : Kullanıcı arayüzünün bulunduğu katman.
 :small_blue_diamond: Mesaj yönetimi
 
 :small_blue_diamond: Dosya yönetimi
+
 
 :computer:  Kullanıcı Paneli Özellikleri
 
