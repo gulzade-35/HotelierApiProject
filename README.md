@@ -79,6 +79,8 @@ Presentation Layer : Kullanıcı arayüzünün bulunduğu katman.
 
 :small_blue_diamond: Kayıt olma & giriş yapma 
 
+:framed_picture: Resim Görselleri
+
 
 
 
