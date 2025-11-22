@@ -10,9 +10,7 @@ RapidAPI üzerinden sağlanan Booking.com API kullanılarak geliştirilmiş mode
 :one: Katmanlı Mimari
 
 API Layer : REST API endpoint’lerinin tanımlandığı katman.
-
 Business Layer : İş kuralları ve validasyonların bulunduğu katman.
-
 Data Access Layer : Veritabanı CRUD operasyonlarının yapıldığı katman. 
 Entity Layer : Tüm entity modellerinin tanımlandığı katman. 
 Presentation Layer : Kullanıcı arayüzünün bulunduğu katman.
