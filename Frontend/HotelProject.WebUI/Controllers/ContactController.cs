@@ -1,0 +1,94 @@
+﻿using HotelProject.WebUI.Dtos.BookingDto;
+using HotelProject.WebUI.Dtos.ContactDto;
+using HotelProject.WebUI.Dtos.MessageCategoryDto;
+using HotelProject.WebUI.Dtos.RoomDto;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HotelProject.WebUI.Controllers
+{
+    [AllowAnonymous]
+    public class ContactController : Controller
+    {
+        private readonly IHttpClientFactory _httpClientFactory;
+
+        public ContactController(IHttpClientFactory httpClientFactory)
+        {
+            _httpClientFactory = httpClientFactory;
+        }
+        public async Task<IActionResult> Index()
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync("http://localhost:5209/api/MessageCategory");
+
+            var jsonData = await responseMessage.Content.ReadAsStringAsync();
+            var values = JsonConvert.DeserializeObject<List<ResultCategoryMessageDto>>(jsonData);
+            List<SelectListItem> values2 = (from x in values
+                                            select new SelectListItem
+                                            {
+                                                Text = x.MessageCategoryName,
+                                                Value = x.MessageCategoryID.ToString()
+                                            }).ToList();
+            ViewBag.v = values2;
+
+            return View();
+
+
+
+        }
+        [HttpGet]
+        public PartialViewResult SendMessage()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SendMessage(CreateContactDto createContactDto)
+        {
+
+            createContactDto.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(createContactDto);
+            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var responseMessage = await client.PostAsync("http://localhost:5209/api/Contact", stringContent);
+            return RedirectToAction("Index", "Default");
+
+
+            //createContactDto.Date = DateTime.Parse(DateTime.Now.ToShortDateString());
+            //var client = _httpClientFactory.CreateClient();
+
+            //var jsonData = JsonConvert.SerializeObject(createContactDto);
+            //var stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+            //try
+            //{
+            //    var responseMessage = await client.PostAsync("http://localhost:5209/api/Contact", stringContent);
+
+            //    if (responseMessage.IsSuccessStatusCode)
+            //    {
+            //        return Content("✅ Kayıt başarılı!");
+            //    }
+            //    else
+            //    {
+            //        var error = await responseMessage.Content.ReadAsStringAsync();
+            //        return Content($"❌ Hata oluştu ({responseMessage.StatusCode}): {error}");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    return Content($"🚨 Exception: {ex.Message}");
+            //}
+        }
+
+
+
+
+
+    }
+}
