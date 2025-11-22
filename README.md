@@ -33,36 +33,48 @@ Presentation Layer : Kullanıcı arayüzünün bulunduğu katman.
 
 :four: Öne Çıkan Teknolojiler
 
-:small_blue_diamond: AutoMapper 🔄 → DTO ↔ Entity dönüşümleri
+:small_blue_diamond: AutoMapper → DTO ↔ Entity dönüşümleri
 
-:small_blue_diamond:
+:small_blue_diamond: SOLID & Clean Code 
 
-:small_blue_diamond:
+:small_blue_diamond: [Authorize] / [AllowAnonymous] ile erişim kontrolü
 
-:small_blue_diamond:
-:small_blue_diamond:
-:small_blue_diamond:
-:small_blue_diamond:
-:small_blue_diamond:
-:small_blue_diamond:
-:small_blue_diamond:
-:small_blue_diamond:
-:small_blue_diamond:
+:small_blue_diamond: Rapid API → Instagram, LinkedIn, Twitter takipçi verileri
+
+:small_blue_diamond: Dosya İşlemleri → Upload & Download
+
+:small_blue_diamond: AJAX → Sayfa yenilemeden veri gönderme/alma
+
+:small_blue_diamond: FluentValidation
+ 
+:small_blue_diamond: MailKit + SMTP → Otomatik e-posta
+
+:small_blue_diamond: Razor Pages + ViewComponent 
+
+:small_blue_diamond: Repository Design Pattern
 
 :low_brightness: Admin Paneli Özellikleri
 
 :small_blue_diamond: Personel, referanslar, hizmetler, odalar, misafirler, roller vb. için CRUD
+
 :small_blue_diamond: Rezervasyon durumları otomatik “Onay Bekliyor”
+
 :small_blue_diamond: Güncelleme sonrası otomatik mail bildirimi
+
 :small_blue_diamond: Mesaj yönetimi
+
 :small_blue_diamond: Dosya yönetimi
 
 :computer:  Kullanıcı Paneli Özellikleri
 
 :small_blue_diamond: Otel bilgileri, odalar, hizmetler, yorumlar, ekip bilgisi
+
 :small_blue_diamond: Mail bülteni aboneliği
+
 :small_blue_diamond: Rezervasyon
+
 :small_blue_diamond: İletişim formu
+
 :small_blue_diamond: Kayıt olma & giriş yapma 
 
 
